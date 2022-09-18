@@ -1,3 +1,5 @@
+import { Input } from '../Input';
+
 export function NewAdd() {
   return (
     <div className="flex">
@@ -6,13 +8,13 @@ export function NewAdd() {
         <form>
           <label htmlFor="game" className="block">
             <span className="block text-sm font-bold text-white py-2">
-              Seu nome (ou nickname)
+              Qual o game?
             </span>
             <select
               name="game"
               id="game"
-              className="peer w-full h-12 rounded-md px-4 bg-zinc-900 text-white"
               placeholder="Selecione o game que deseja jogar..."
+              className="bg-zinc-900 py-3 px-4 rounded text-sm placeholder:text-zinc-500"
             >
               <option value="" disabled selected>
                 Selecione o game que deseja jogar...
@@ -26,52 +28,40 @@ export function NewAdd() {
               Por favor informe seu nome ou nickname...
             </p>
           </label>
-          <label htmlFor="name" className="block">
-            <span className="block text-sm font-bold text-white py-2">
-              Seu nome (ou nickname)
-            </span>
-            <input
+
+          <Input
+            type="text"
+            id="name"
+            label="Seu nome (ou nickname)"
+            name="name"
+            placeholder="Como te chamam dentro do game?"
+          />
+          <p className="mt-2 invisible peer-invalid:visible text-pink-600 text-sm">
+            Por favor informe seu nome ou nickname...
+          </p>
+
+          <div className="flex gap-4">
+            <Input
               type="text"
-              id="name"
-              name="name"
-              className="peer w-full h-12 rounded-md px-4 bg-zinc-900 text-white"
+              label="Joga há quantos anos?"
+              id="experience"
+              name="experience"
               placeholder="Como te chamam dentro do game?"
             />
             <p className="mt-2 invisible peer-invalid:visible text-pink-600 text-sm">
               Por favor informe seu nome ou nickname...
             </p>
-          </label>
-          <div className="flex gap-4">
-            <label htmlFor="experience" className="block">
-              <span className="block text-sm font-bold text-white py-2">
-                Joga há quantos anos?
-              </span>
-              <input
-                type="text"
-                id="experience"
-                name="experience"
-                className="peer w-full h-12 rounded-md px-4 bg-zinc-900 text-white"
-                placeholder="Como te chamam dentro do game?"
-              />
-              <p className="mt-2 invisible peer-invalid:visible text-pink-600 text-sm">
-                Por favor informe seu nome ou nickname...
-              </p>
-            </label>
-            <label htmlFor="discord" className="block">
-              <span className="block text-sm font-bold text-white py-2">
-                Qual seu Discord?
-              </span>
-              <input
-                type="text"
-                id="discord"
-                name="discord"
-                className="peer w-full h-12 rounded-md px-4 bg-zinc-900 text-white"
-                placeholder="Como te chamam dentro do game?"
-              />
-              <p className="mt-2 invisible peer-invalid:visible text-pink-600 text-sm">
-                Por favor informe seu nome ou nickname...
-              </p>
-            </label>
+
+            <Input
+              type="text"
+              label="Qual seu Discord?"
+              id="discord"
+              name="discord"
+              placeholder="Como te chamam dentro do game?"
+            />
+            <p className="mt-2 invisible peer-invalid:visible text-pink-600 text-sm">
+              Por favor informe seu nome ou nickname...
+            </p>
           </div>
         </form>
       </div>

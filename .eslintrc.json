@@ -3,7 +3,10 @@
     "browser": true,
     "es2021": true
   },
-  "extends": ["plugin:react/recommended", "airbnb"],
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb"
+  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
@@ -12,8 +15,13 @@
     "ecmaVersion": 11,
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint", "eslint-plugin-import-helpers"],
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "eslint-plugin-import-helpers"
+  ],
   "rules": {
+    "react/jsx-one-expression-per-line": "off",
     "react/require-default-props": "off",
     "function-paren-newline": "off",
     "react/no-children-prop": "off",
@@ -29,8 +37,14 @@
     "object-curly-newline": "off",
     "import/no-unresolved": "off",
     "import/prefer-default-export": "off",
-    "semi": ["error", "always"],
-    "quotes": ["error", "single"],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
     " import/no-unresolved": "off",
     "import/extensions": "off",
     "import-helpers/order-imports": [
@@ -42,7 +56,11 @@
           "module",
           "/^@shared/",
           "/^~/services/",
-          ["parent", "sibling", "index"],
+          [
+            "parent",
+            "sibling",
+            "index"
+          ],
           "/^~/"
         ],
         "alphabetize": {

@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #0693e3 transparent;
+}
+
+/* Works on Chrome, Edge, and Safari */
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #0693e3;
+  border-radius: 40px;
+  border: 3px solid transparent;
+}
+
+.carousel-andrelinos {
+  scrollbar-width: thin;
+  scrollbar-color: #0693e3 transparent;
+}
+
+.carousel-andrelinos::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+input[type='number']::-webkit-inner-spin-button {
+  display: none;
+}

@@ -23,11 +23,13 @@
     "keen-slider": "6.8.1",
     "phosphor-react": "^1.4.1",
     "react": "^18.2.0",
+    "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/node": "18.7.16",
     "@types/react": "^18.0.17",
+    "@types/react-copy-to-clipboard": "^5.0.4",
     "@types/react-dom": "^18.0.6",
     "@typescript-eslint/eslint-plugin": "^5.36.2",
     "@typescript-eslint/parser": "^5.36.2",

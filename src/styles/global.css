@@ -4,12 +4,12 @@
 
 body {
   scrollbar-width: thin;
-  scrollbar-color: #0693e3 transparent;
+  scrollbar-color: #9572fc transparent;
 }
 
 /* Works on Chrome, Edge, and Safari */
 body::-webkit-scrollbar {
-  width: 5px;
+  width: 2px;
 }
 
 body::-webkit-scrollbar-track {
@@ -17,14 +17,14 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #0693e3;
-  border-radius: 40px;
-  border: 3px solid transparent;
+  background-color: #9572fc;
+  border-radius: 10px;
+  border: 1px solid transparent;
 }
 
 .carousel-andrelinos {
   scrollbar-width: thin;
-  scrollbar-color: #0693e3 transparent;
+  scrollbar-color: #9572fc transparent;
 }
 
 .carousel-andrelinos::-webkit-scrollbar {

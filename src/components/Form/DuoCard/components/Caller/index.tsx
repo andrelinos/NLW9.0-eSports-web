@@ -5,8 +5,8 @@ export function Caller() {
     <div>
       <DialogTrigger>
         <div
-          className=" bg-blue-300 absolute text-red-400 z-0 left-2
-          right-2 top-2 bottom-2 rounded-md opacity-0 lg:opacity-10 hover:opacity-0"
+          className="bg-blue-300 absolute text-red-400 z-0 left-0
+          right-0 top-0 bottom-0 rounded-lg opacity-0 lg:opacity-5 hover:opacity-0"
         />
       </DialogTrigger>
     </div>

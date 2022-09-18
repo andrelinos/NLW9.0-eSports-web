@@ -1,6 +1,9 @@
-import { ReactNode } from 'react';
+import classNames from 'classnames';
 
-import { GameController } from 'phosphor-react';
+import { Discord } from '../Discord';
+import { Caller } from '../Discord/Caller';
+
+import { Modal } from '~/components/Modal';
 
 interface CardInfoProps {
   data: any;
@@ -8,18 +11,29 @@ interface CardInfoProps {
 
 export function CardInfo({ data, ...rest }: CardInfoProps) {
   return (
-    <div className="flex w-60 h-80 gap-2 bg-zinc-500 rounded-lg p-2" {...rest}>
-      <div className="m-4">
-        <h1>Nome</h1>
-        <p>{data.name}</p>
-        <h1>Tempo de jogo</h1>
-        <p>{data.yearsPlaying}</p>
-        <h1>Usa chat de voz</h1>
-        <p>{data.useVoiceChannel ? 'Sim' : 'Não'}</p>
-        <button type="button">
-          <GameController size={32} />
-          Conectar
-        </button>
+    <div
+      className="lg:min-w-[300px] max-w-[300px] gap-2 bg-[#18181B] rounded-lg p-4
+      mx-auto"
+      {...rest}
+    >
+      <h1>Nome</h1>
+      <p className="font-semibold">{data.name}</p>
+      <h1>Tempo de jogo</h1>
+      <p className="font-semibold">{data.yearsPlaying}</p>
+      <h1>Usa chat de voz</h1>
+      <p
+        className={classNames('font-semibold', {
+          'text-green-500': data.useVoiceChannel,
+          'text-red-400': !data.useVoiceChannel,
+        })}
+      >
+        {data.useVoiceChannel ? 'Sim' : 'Não'}
+      </p>
+
+      <div className="flex justify-center items-end">
+        <Modal contentCall={<Caller />}>
+          <Discord discordId={data.id} />
+        </Modal>
       </div>
     </div>
   );

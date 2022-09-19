@@ -1,16 +1,12 @@
-/* eslint-disable no-alert */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-
 import { FormEvent, useEffect, useState } from 'react';
 
 import * as Checkbox from '@radix-ui/react-checkbox';
 import * as Dialog from '@radix-ui/react-dialog';
-import * as Select from '@radix-ui/react-select';
 import * as ToggleGroup from '@radix-ui/react-toggle-group';
 import axios from 'axios';
-import { Check, GameController, MagnifyingGlassPlus } from 'phosphor-react';
+import { Check, GameController } from 'phosphor-react';
 
-import { CreateAdBanner } from '../../CreateBanner';
 import { GameSelectInput } from '../../Form/GameSelect';
 import { Input } from '../../Form/Input';
 import { ButtonModal } from './components/Button';
@@ -74,10 +70,6 @@ export function CreateNewAds() {
         className="mt-8 flex w-full flex-col gap-4"
       >
         <div className="flex bg flex-col gap-2 overflow-y-auto">
-          <label htmlFor="game" className="block">
-            Qual game?
-          </label>
-
           <GameSelectInput data={games} id="game" />
         </div>
 

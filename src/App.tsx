@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 
-import 'keen-slider/keen-slider.min.css';
+// import 'keen-slider/keen-slider.min.css';
 
+import axios from 'axios';
 import { useKeenSlider } from 'keen-slider/react';
 import { Spinner } from 'phosphor-react';
 
@@ -31,7 +32,7 @@ export function App() {
   const [sliderRef] = useKeenSlider(
     {
       slideChanged() {
-        console.log('slide changed');
+        // console.log('slide changed');
       },
       loop: true,
       slides: { perView: 1 },
@@ -60,8 +61,7 @@ export function App() {
     async function fetchGames() {
       setIsLoading(true);
 
-      await api
-        .get('games')
+      await axios('http://localhost:3333/games')
         .then((response) => {
           const { data } = response;
 
@@ -72,8 +72,8 @@ export function App() {
 
           setGames(dataSorted);
         })
-        .catch(() => {
-          throw new Error('Request error');
+        .catch((err) => {
+          throw new Error(`Request error: ${err}`);
         })
         .finally(() => setIsLoading(false));
     }

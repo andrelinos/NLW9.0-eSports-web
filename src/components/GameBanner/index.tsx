@@ -1,4 +1,4 @@
-import 'keen-slider/keen-slider.min.css';
+// import 'keen-slider/keen-slider.min.css';
 
 interface GameBannerProps {
   bannerUrl: string;

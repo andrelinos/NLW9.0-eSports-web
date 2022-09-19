@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import 'keen-slider/keen-slider.min.css';
+// import 'keen-slider/keen-slider.min.css';
 
 import classNames from 'classnames';
 import { useKeenSlider } from 'keen-slider/react';

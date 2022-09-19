@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
-const imageBg = './assets/images/background-galaxy.png';
+const imageBg = './assets/background-galaxy.png';
 module.exports = {
   content: ['./src/**/*.tsx', './index.html'],
   theme: {

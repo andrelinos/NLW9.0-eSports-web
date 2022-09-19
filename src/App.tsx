@@ -61,7 +61,8 @@ export function App() {
     async function fetchGames() {
       setIsLoading(true);
 
-      await axios('http://localhost:3333/games')
+      await api
+        .get('/games')
         .then((response) => {
           const { data } = response;
 
